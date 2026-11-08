@@ -1,0 +1,1 @@
+{"name":"a-toi-noemie","private":true,"type":"module","scripts":{"build":"node build.mjs","check":"node --check app.js && node --check content.js && node --check memories.js && node --check ornaments.js"}}

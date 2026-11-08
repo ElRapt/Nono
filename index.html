@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="fr" data-world="day">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eee5d2">
+  <meta name="description" content="À toi, Noémie. Une lettre, quelques souvenirs, et tout l'amour que le temps ne peut éroder.">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>À toi, Noémie.</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/cormorant-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#letter">Aller à la lettre</a>
+
+  <section class="cover" id="cover" aria-label="À toi, une lettre à ouvrir" hidden>
+    <div class="cover-lines" aria-hidden="true"></div>
+    <div class="cover-ornament" data-ornament="sprig" aria-hidden="true"></div>
+    <span class="eyebrow cover-eyebrow">UNE LETTRE, RIEN QUE POUR TOI</span>
+    <button class="note" id="open-letter" aria-label="Ouvrir la lettre à Noémie">
+      <span class="note-corner note-corner-a" aria-hidden="true"></span>
+      <span class="note-corner note-corner-b" aria-hidden="true"></span>
+      <span class="note-rule" aria-hidden="true"></span>
+      <span class="handwriting">À toi,</span>
+      <span class="note-flourish" aria-hidden="true">❧</span>
+      <span class="note-recipient">Noémie.</span>
+      <span class="seal" aria-hidden="true"><span>N</span></span>
+      <span class="open-invitation">OUVRIR LA LETTRE <span aria-hidden="true">↗</span></span>
+    </button>
+    <span class="cover-footnote">Prends un instant. Il est à toi.</span>
+  </section>
+
+  <div class="world-turn" id="world-turn" aria-hidden="true"><div class="turn-flower" data-ornament="rosette"></div></div>
+
+  <div id="page" class="page">
+    <header class="masthead">
+      <a class="monogram" href="#letter" aria-label="Début de la lettre">N<span aria-hidden="true">.</span></a>
+      <span class="eyebrow masthead-note" data-copy="masthead">UNE LETTRE • SIX MOIS</span>
+      <button id="music-toggle" class="music-toggle" aria-expanded="false" aria-controls="music-room">
+        <span class="sound-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <span id="music-label">En musique</span>
+      </button>
+    </header>
+
+    <main class="letter-shell" id="letter" tabindex="-1">
+      <div class="top-ornament" data-ornament="divider" aria-hidden="true"></div>
+      <section class="hero" aria-labelledby="letter-title">
+        <div class="hero-copy">
+          <span class="eyebrow chapter-mark" data-copy="chapter1">I. LES SONGES</span>
+          <p class="salutation" data-copy="salutation">À toi,</p>
+          <h1 id="letter-title" data-copy="title">Parmi mes<br><em>songes.</em></h1>
+          <div class="little-rule" aria-hidden="true"><span></span>✧<span></span></div>
+          <p class="prose" id="paragraph1">De Terres Latines en Puys, je vole parmi mes songes sans que tu ne les quitte. Qu’ils soient accompagnés de CRÊPES, de curry, de CHOCOGRENOUILLES, de MADELEINES ou de skyr volé à tes lèvres ; j’inspire.</p>
+          <a class="continue-link" href="#souvenirs"><span data-copy="continue">AU FIL DE NOS SOUVENIRS</span><span class="down-arrow" aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-garden" aria-hidden="true">
+          <div class="garden-art" data-ornament="garden"></div>
+          <div class="garden-inscription"><span class="garden-initial">N</span><span class="garden-word" data-copy="garden">au cœur de mon monde</span></div>
+          <span class="garden-roman">VI</span>
+        </div>
+      </section>
+
+      <div class="chapter-divider" data-ornament="divider" aria-hidden="true"></div>
+
+      <section class="memories-section" id="souvenirs" aria-labelledby="souvenir-title">
+        <div class="section-heading reveal">
+          <span class="eyebrow" data-copy="chapter2">II. LES SOUVENIRS</span>
+          <h2 id="souvenir-title" data-copy="souvenirTitle">Le monde a<br><em>tes couleurs.</em></h2>
+          <div class="side-sprig" data-ornament="sprig" aria-hidden="true"></div>
+        </div>
+        <div class="memory-prose reveal">
+          <p class="prose" id="paragraph2">DANS UNE RUELLE SOMBRE ou AU SOMMET DU MONDE, je vogue dans les souvenirs qui m’évoquent tes yeux. Pour prendre le MATCHA ou une DESPE ; j’expire.</p>
+          <span class="breath" data-copy="breath">J’expire.</span>
+          <span class="memory-hint" data-copy="memoryHint">Les mots soulignés gardent nos souvenirs.</span>
+        </div>
+      </section>
+
+      <section class="heart-section reveal" aria-labelledby="heart-title">
+        <div class="heart-edge" data-ornament="vine" aria-hidden="true"></div>
+        <span class="eyebrow" data-copy="chapter3">III. LE CŒUR</span>
+        <h2 id="heart-title" data-copy="heartTitle">Au cœur <em>du mien.</em></h2>
+        <p class="prose" id="paragraph3">Au frais dans la MOUSSE, au chaud PARMI LES TABLES, je m’imprègne de ces moments qui ne me quittent pas. Si MUCHA mettait la femme au centre de son monde, je le comprends car je te mets au cœur du mien ; je t’aime.</p>
+        <span class="heart-star" aria-hidden="true">✧</span>
+        <div class="heart-edge heart-edge-right" data-ornament="vine" aria-hidden="true"></div>
+      </section>
+
+      <section class="return-section" aria-labelledby="return-title">
+        <div class="return-flower reveal" data-ornament="rosette" aria-hidden="true"></div>
+        <div class="return-copy reveal">
+          <span class="eyebrow" data-copy="chapter4">IV. LE RETOUR</span>
+          <h2 id="return-title" data-copy="returnTitle">Et je <em>t’attends.</em></h2>
+          <p class="prose" id="paragraph4">Loin de moi, j’attends que tu sois de retour, POUR ME JOUER UN MAUVAIS TOUR. Je ne suis jamais le seul, que je sois DE POILS ou de PLUMES.</p>
+        </div>
+      </section>
+
+      <div class="chapter-divider" data-ornament="divider" aria-hidden="true"></div>
+
+      <section class="time-section reveal" aria-labelledby="time-title">
+        <span class="eyebrow" data-copy="chapter5">V. LE TEMPS</span>
+        <h2 id="time-title" data-copy="timeTitle">Six mois.<br><em>Et l’infini devant nous.</em></h2>
+        <p class="prose" id="paragraph5">On dit que les sables du Temps sont plus épais ou plus diffus selon le sablier. Ce que l’adage ne mentionne pas, c’est que sa granularité est multiple lorsqu’on est animé de la plus grande des félicités. 6 mois avec toi sont trop longs lorsque tu es loin, trop rapides lorsque tu es dans mes bras. Mais le passage du Temps ne peut éroder l’amour que je te porte.</p>
+        <div class="signature-wrap">
+          <button class="signature" id="noemie" aria-describedby="turn-hint" aria-label="Noémie. Retourner la lettre et la lire en anglais">Noémie<span>.</span></button>
+          <span class="signature-underline" aria-hidden="true"></span>
+          <p id="turn-hint" class="turn-hint"><span aria-hidden="true">↶</span> <span data-copy="turnHint">Un clic sur ton nom, et le monde se retourne.</span></p>
+        </div>
+      </section>
+
+      <footer class="letter-footer">
+        <span data-copy="footerLeft">TOI & MOI</span>
+        <span class="footer-flower" aria-hidden="true">✼</span>
+        <span data-copy="footerRight">ET TOUT CE QUI RESTE À ÉCRIRE</span>
+      </footer>
+    </main>
+    <footer class="page-footer"><button id="close-letter" data-copy="closeLetter">Replier la lettre</button><span id="language-mark">FR · côté soleil</span></footer>
+  </div>
+
+  <aside id="memory-preview" class="memory-preview" aria-label="Un souvenir" hidden>
+    <button class="memory-close" id="memory-close" aria-label="Fermer le souvenir">×</button>
+    <div class="memory-window"><img id="memory-image" src="assets/memory-placeholder.svg" alt="" width="480" height="600"><div class="memory-vignette"></div></div>
+    <p id="memory-caption"></p><span id="memory-subtitle"></span>
+  </aside>
+
+  <aside class="music-room" id="music-room" aria-label="Musique" hidden>
+    <div class="music-room-head"><span data-copy="musicTitle">Un air pour nous</span><button id="music-close" aria-label="Fermer et arrêter la musique">×</button></div>
+    <div id="youtube-player"></div>
+    <p id="music-status" role="status">La musique se prépare…</p>
+    <a href="https://www.youtube.com/watch?v=_Utq0ce_YU4" target="_blank" rel="noopener noreferrer" data-copy="youtubeLink">Écouter sur YouTube ↗</a>
+  </aside>
+  <p class="sr-only" id="language-announcement" aria-live="polite"></p>
+  <noscript><p class="noscript-note">La lettre reste à lire. Active JavaScript pour l’ouvrir en musique, découvrir les souvenirs et passer en anglais.</p></noscript>
+</body>
+</html>
