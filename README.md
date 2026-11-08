@@ -17,7 +17,7 @@ crepes: {
 },
 ```
 
-`width` et `height` indiquent les dimensions de la photo : le cadre garde ainsi son format, portrait ou paysage. `position` règle le cadrage. Les deux langues utilisent la même photo. Les 13 expressions en capitales ont leur emplacement. Les dix images fournies sont affectées à PLUMES, PARMI LES TABLES, MATCHA, MOUSSE, DANS UNE RUELLE SOMBRE, AU SOMMET DU MONDE, CHOCOGRENOUILLES, DESPE, DE POILS et MADELEINES. La photo de l’affiche est affectée à MUCHA. Une rosace vectorielle reste pour CRÊPES et POUR ME JOUER UN MAUVAIS TOUR. Les photos manquantes ou introuvables reviennent à la rosace. Employer des noms de fichiers sans espaces simplifie les chemins. Les chemins sont relatifs pour fonctionner dans `/Nono/` sur Pages.
+`width` et `height` indiquent les dimensions de la photo : le cadre garde ainsi son format, portrait ou paysage. `position` règle le cadrage. Les deux langues utilisent la même photo. Les 13 expressions en capitales ont leur photo, y compris CRÊPES et POUR ME JOUER UN MAUVAIS TOUR. La photo de l’affiche est affectée à MUCHA. Les photos manquantes ou introuvables reviennent à la rosace. Employer des noms de fichiers sans espaces simplifie les chemins. Les chemins sont relatifs pour fonctionner dans `/Nono/` sur Pages.
 
 Sur ordinateur : survol ou focus au clavier. Sur téléphone : toucher le mot. Échap, la croix, un clic à l’extérieur ou le défilement hors champ referment le souvenir. L’image apparaît et s’agrandit progressivement, sans modifier la mise en page de la lettre.
 

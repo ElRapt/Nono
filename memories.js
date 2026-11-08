@@ -8,7 +8,7 @@
  * Une illustration géométrique attend les photos encore non attribuées.
  */
 export const memories = {
-  crepes:         { src: "", position: "50% 50%", fr: "Crêpes", en: "Crêpes" },
+  crepes:         { src: "assets/photos/crepes.webp", width: 720, height: 960, position: "50% 50%", fr: "Crêpes", en: "Crêpes" },
   chocogrenouilles: { src: "assets/photos/chocogrenouilles.webp", width: 960, height: 720, position: "50% 50%", fr: "Chocogrenouilles", en: "Chocolate Frogs" },
   madeleines:     { src: "assets/photos/madeleines.webp", width: 720, height: 960, position: "50% 50%", fr: "Madeleines", en: "Madeleines" },
   ruelle:         { src: "assets/photos/ruelle.webp", width: 960, height: 720, position: "50% 50%", fr: "Dans une ruelle sombre", en: "In a dark little street" },
@@ -18,7 +18,7 @@ export const memories = {
   mousse:         { src: "assets/photos/mousse.webp", width: 720, height: 960, position: "50% 50%", fr: "Dans la mousse", en: "In the moss" },
   tables:         { src: "assets/photos/tables.webp", width: 960, height: 720, position: "50% 50%", fr: "Parmi les tables", en: "Among the tables" },
   mucha:          { src: "assets/mucha-reference.jpg", width: 720, height: 960, position: "50% 32%", fr: "Mucha", en: "Mucha" },
-  mauvais_tour:   { src: "", position: "50% 50%", fr: "Pour me jouer un mauvais tour", en: "To prepare for trouble" },
+  mauvais_tour:   { src: "assets/photos/mauvais_tour.webp", width: 960, height: 720, position: "50% 50%", fr: "Pour me jouer un mauvais tour", en: "To prepare for trouble" },
   poils:          { src: "assets/photos/poils.webp", width: 720, height: 960, position: "50% 50%", fr: "De poils", en: "Fur" },
   plumes:         { src: "assets/photos/plumes.webp", width: 701, height: 960, position: "50% 50%", fr: "De plumes", en: "Feathers" },
 };
