@@ -23,7 +23,7 @@ Sur ordinateur : survol ou focus au clavier. Sur téléphone : toucher le mot. �
 
 ## La lettre
 
-- Le billet « À toi, » ouvre la page.
+- Le billet « À toi, » ouvre la page. Seuls le billet et le texte fourni sont affichés ; les contrôles utilisent des icônes avec des libellés accessibles.
 - Le bouton **Noémie.** retourne la palette, les placements et les ornements, puis bascule la langue. Un second clic revient au français. Le texte ne s’affiche jamais en miroir.
 - `content.js` contient le français fourni et sa traduction. Terres Latines, les Puys, Despe et les noms de pâtisseries sont conservés. « TO PREPARE FOR TROUBLE » reprend le clin d’œil anglophone à la Team Rocket.
 - Les animations respectent `prefers-reduced-motion`. La lettre française reste lisible sans JavaScript.
@@ -31,7 +31,7 @@ Sur ordinateur : survol ou focus au clavier. Sur téléphone : toucher le mot. �
 
 ## Musique
 
-La vidéo demandée (`_Utq0ce_YU4`) est intégrée avec le lecteur YouTube officiel, visible et contrôlable. L’ouverture du billet demande sa lecture à 35 % du volume, en boucle. Certains navigateurs exigent une pression supplémentaire sur lecture. La croix et le bouton « En musique » arrêtent la lecture et ferment le lecteur. En cas de blocage réseau ou d’intégration interdite par YouTube, un lien permet d’écouter la vidéo sur YouTube. Aucun téléchargement ou extraction audio n’est effectué.
+La vidéo demandée (`_Utq0ce_YU4`) est intégrée avec le lecteur YouTube officiel, visible et contrôlable. L’ouverture du billet demande sa lecture à 35 % du volume, en boucle. Certains navigateurs exigent une pression supplémentaire sur lecture. La croix et le bouton avec les barres sonores arrêtent la lecture et ferment le lecteur. En cas de blocage réseau ou d’intégration interdite par YouTube, un lien permet d’écouter la vidéo sur YouTube. Aucun téléchargement ou extraction audio n’est effectué.
 
 ## Publication GitHub Pages
 

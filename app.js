@@ -31,13 +31,14 @@ function applyLanguage() {
   document.querySelectorAll('[data-copy]').forEach(el => { el.innerHTML = c[el.dataset.copy]; });
   c.paragraphs.forEach((text,i) => { $(`paragraph${i+1}`).innerHTML = text; });
   $('noemie').setAttribute('aria-label', c.turnLabel);
-  $('language-mark').textContent = c.language;
   $('music-label').textContent = c.musicLabel;
   $('music-status').textContent = c[musicState];
   $('memory-close').setAttribute('aria-label',c.closeMemory);
   $('music-close').setAttribute('aria-label',c.closeMusic);
   document.querySelector('.skip-link').textContent = c.skip;
-  document.querySelector('.monogram').setAttribute('aria-label',language === 'fr' ? 'Début de la lettre' : 'Beginning of the letter');
+  $('open-letter').setAttribute('aria-label',c.openLetter);
+  $('close-letter').setAttribute('aria-label',c.closeLetter);
+  $('youtube-link').setAttribute('aria-label',c.youtubeLink);
   $('music-room').setAttribute('aria-label',language === 'fr' ? 'Musique' : 'Music');
   $('memory-preview').setAttribute('aria-label',language === 'fr' ? 'Un souvenir' : 'A memory');
 }
@@ -128,15 +129,13 @@ function showMemory(button) {
   const img = $('memory-image');
   const request = ++imageRequest;
   const isPlaceholder = !memory.src;
-  $('memory-caption').textContent = memory[language];
-  $('memory-subtitle').textContent = isPlaceholder ? copy[language].placeholder : '';
   img.alt = isPlaceholder ? '' : memory[language];
   img.style.objectPosition = memory.position || '50% 50%';
   img.src = 'assets/memory-placeholder.svg';
   if (memory.src) {
     const photo = new Image();
     photo.onload = () => { if (request === imageRequest && activeMemory === button) img.src = photo.src; };
-    photo.onerror = () => { if (request === imageRequest) $('memory-subtitle').textContent = copy[language].placeholder; };
+    photo.onerror = () => { if (request === imageRequest) img.alt = ''; };
     photo.src = memory.src;
   }
   preview.hidden = false;
