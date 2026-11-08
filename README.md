@@ -35,9 +35,9 @@ La vidéo demandée (`_Utq0ce_YU4`) est intégrée avec le lecteur YouTube offic
 
 ## Publication GitHub Pages
 
-Le workflow [`.github/workflows/pages.yml`](.github/workflows/pages.yml) vérifie le JavaScript, construit `dist/` et publie à chaque envoi sur `main`.
+La publication native utilise **Settings → Pages → Source → Deploy from a branch → main → / (root)**. Les fichiers du site sont déjà prêts à servir ; `.nojekyll` évite la transformation Jekyll. Les prochains envois sur `main` déclenchent la publication native.
 
-Pour la première activation : **Settings → Pages → Build and deployment → Source → GitHub Actions**. Ensuite relancer le workflow « Publish the letter to GitHub Pages » depuis **Actions** si nécessaire.
+Le workflow [`.github/workflows/pages.yml`](.github/workflows/pages.yml) est conservé comme alternative manuelle : pour l’utiliser, choisir **GitHub Actions** comme source, puis lancer « Publish the letter to GitHub Pages » depuis **Actions**. Il vérifie le JavaScript et construit `dist/` avant publication.
 
 Le dépôt peut rester privé si le forfait GitHub autorise Pages sur les dépôts privés. Le site publié via Pages est destiné à être accessible avec son URL ; ne déposer que les photos destinées à ce site.
 
