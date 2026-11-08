@@ -108,11 +108,13 @@ function placeMemory(button) {
   const preview = $('memory-preview');
   const width = preview.offsetWidth;
   const height = preview.offsetHeight;
-  const edge = 14;
-  const left = Math.max(edge,Math.min(window.innerWidth - width - edge, rect.left + rect.width/2 - width/2));
+  const edge = 18;
+  const viewportWidth = document.documentElement.clientWidth;
+  const viewportHeight = document.documentElement.clientHeight;
+  const left = Math.max(edge,Math.min(viewportWidth - width - edge, rect.left + rect.width/2 - width/2));
   let top = rect.bottom + 15;
-  if (top + height > window.innerHeight - edge) top = rect.top - height - 15;
-  top = Math.max(edge,Math.min(top,window.innerHeight-height-edge));
+  if (top + height > viewportHeight - edge) top = rect.top - height - 15;
+  top = Math.max(edge,Math.min(top,viewportHeight-height-edge));
   preview.style.left = `${left}px`;
   preview.style.top = `${top}px`;
 }
@@ -120,6 +122,7 @@ function showMemory(button) {
   if (suppressFocusPreview || turning) return;
   clearTimeout(hideTimer);
   clearTimeout(previewHideTimer);
+  if (activeMemory === button) return;
   if (activeMemory && activeMemory !== button) activeMemory.setAttribute('aria-expanded','false');
   activeMemory = button;
   button.setAttribute('aria-expanded','true');
@@ -129,15 +132,26 @@ function showMemory(button) {
   const img = $('memory-image');
   const request = ++imageRequest;
   const isPlaceholder = !memory.src;
+  const ratio = memory.width && memory.height ? memory.width / memory.height : .8;
+  preview.style.setProperty('--memory-ratio', ratio);
+  preview.style.setProperty('--memory-width', `${ratio > 1 ? 318 : 248}px`);
+  img.classList.remove('is-loaded');
   img.alt = isPlaceholder ? '' : memory[language];
   img.style.objectPosition = memory.position || '50% 50%';
   img.src = 'assets/memory-placeholder.svg';
   if (memory.src) {
     const photo = new Image();
-    photo.onload = () => { if (request === imageRequest && activeMemory === button) img.src = photo.src; };
-    photo.onerror = () => { if (request === imageRequest) img.alt = ''; };
+    photo.onload = () => {
+      if (request === imageRequest && activeMemory === button) {
+        img.src = photo.src;
+        img.classList.add('is-loaded');
+      }
+    };
+    photo.onerror = () => {
+      if (request === imageRequest) { img.alt = ''; img.classList.add('is-loaded'); }
+    };
     photo.src = memory.src;
-  }
+  } else img.classList.add('is-loaded');
   preview.hidden = false;
   placeMemory(button);
   requestAnimationFrame(() => { if (activeMemory === button) preview.classList.add('is-visible'); });
